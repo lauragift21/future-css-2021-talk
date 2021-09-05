@@ -84,7 +84,7 @@ layout: cover
 
 ---
 layout: image-right
-image: ./static/images/grid.png
+image: /grid.png
 ---
 
 # The Past: CSS History
@@ -95,19 +95,28 @@ Remember when websites were styled like this?
 
 Well, a lot has changed over the years. 
 
-We've even gone from styling layouts with floats and clear, tables for layouts, IE support for styles to more modern layouts like we have today.
+### Does the following ring a bell?
 
+- Float and clearfix hack
+- Tables
+- Support for IE Browsers
+
+<!--
+We've even gone from styling layouts with floats and clear, tables for layouts, IE support for styles to more modern layouts like we have today.
+-->
 
 ---
 
 # The Present: CSS Today
 
-Modern CSS is 
+Modern CSS has improved greatly over the years.
 
-We're in a time where it's possible to style layouts with Flexbox and Grid. 
+We're in a time when it's possible to style layouts with **Flexbox** and **CSS Grid**, and many other possibilites for styling the web.
 
+<!--
+Now we're in time where it possible to style your layout with Flexbox and Grid whivh saves us all the headache of styling multi-demensional layout. what else can we do with Modern CSS. I'm pretty sure most of us keep up with the latest in CSS world so some of these might already be familair to you.
+-->
 
-<!-- Now we're in time where it possible to style your layout with Flexbox and Grid whivh saves us all the headache of styling multi-demensional layout. what else can we do with Modern CSS. I'm pretty sure most of us keep up with the latest in CSS world so some of these might already be familair to you. -->
 ---
 layout: cover
 ---
@@ -121,7 +130,6 @@ layout: cover
 - Logical CSS Functions
 - Container Queries
 
-
 ---
 
 # Content Visibility
@@ -134,6 +142,7 @@ section {
 }
 ```
 
+
 ---
 layout: center
 ---
@@ -141,6 +150,18 @@ layout: center
 <h1 class="text-center">Demo</h1>
 
 <Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/RwgGpjZ?default-tab=css%2Cresult&editable=true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 
@@ -232,25 +253,29 @@ section > h1, section > h2, section > h3, section > p {
   font-size: 20px;
 }
 ```
----
+
+
 ---
 
 # `:where()` Selector
 
 The `:where()` selector functions the exact way as the `:is()` pseudo-class functions with the exception of a specificity rule applied to it - it's specificity is always zero.
 
-```css
+```css{1}
   section > :where(h1, h2, h3, p) {
     font-size: 20px;
   }
 ```
-Translates to the following:
 
-```css
+Translates to:
+
+```css{1}
 section > h1, section > h2, section > h3, section > p {
   font-size: 20px;
 }
 ```
+
+
 ---
 
 # `:not()` Selector
@@ -313,7 +338,8 @@ h1 {
 
 # Container Queries
 
-Container Queries is one of the newest CSS feature that would allow web developers to style DOM elements based on the size of a containing element rather than the size of the browser viewport.
+Container Queries is one of the newest CSS feature that will allow developers to style `DOM elements` based on the size of a containing element rather than the size of the browser viewport.
+
 
 ---
 layout: center
@@ -335,16 +361,22 @@ h1 {
 }
 </style>
 ---
-layout: center
-class: px-20
+layout: image-right
+image: /future.png
 ---
 
-# What does the Future look like?
+## What does the future look like?
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+Expect more improvements coming in and new CSS features. This is based off the snapshot from the CSS Working Group(CSS WG)[^1] Current Work.
+
+These are some of the features you can expect to see coming to CSS in the future:
+
+ - Container Queries - Browser Support.
+ - CSS Nesting Module
+ - 3
+ - 4
+
 
 ---
 
@@ -352,8 +384,17 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 - [A Look Back at the History of CSS](https://css-tricks.com/look-back-history-css/)
 - [Selectors Level 4 Draft Spec](https://drafts.csswg.org/selectors-4/)
-- 
-<!-- I've only scratched the surface in this talk, if you'll love to get into more depth some of the things I shared here today I will recommend you check out the following resources: -->
+- [Container Queries](https://css.oddbird.net/rwd/query/)
+- [CSS Contain Spec](https://drafts.csswg.org/css-contain/)
+- [MDN :is() Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:is)
+- [CSS WG Current Work](https://www.w3.org/Style/CSS/current-work)
+- []()
+- []()
+
+<!--
+I've only scratched the surface in this talk, if you'll love to get into more depth some of the things I shared here today I will recommend you check out the following resources:
+-->
+
 ---
 layout: center
 class: text-center
