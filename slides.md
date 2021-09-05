@@ -1,29 +1,26 @@
 ---
-# try also 'default' to start simple
-theme: seriph
+theme: default
 title: What's New in the World of CSS
-# random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-handle: @lauragift_
-# apply any windi css classes to the current slide
-class: 'text-right'
-# https://sli.dev/custom/highlighters.html
+# background: https://source.unsplash.com/collection/94734566/1920x1080
+class: 'text-center'
 highlighter: shiki
 # show line numbers in code blocks
-lineNumbers: true
+lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## What's New in the World of CSS / The Future of CSS
+  ## What's New in the World of CSS & The Future of CSS
   Presentation by Gift Egwuenu.
   Frontend Developer Consultant at [Passionate People](https://passionatepeople.io)
 ---
 
-# What's New in the World of CSS / The Future of CSS
+# What's New in the World of CSS
 
-Presentation by Gift Egwuenu [@lauragift_](https://twitter.com/lauragift_)
+& The Future of CSS
 
-Frontend Developer Consultant at [Passionate People](https://passionatepeople.io)
+Infobip Shift Dev 2021
+
+[@lauragift_](https://twitter.com/lauragift_)
 
 <div class="abs-br m-6 flex gap-2 pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -32,37 +29,35 @@ Frontend Developer Consultant at [Passionate People](https://passionatepeople.io
 </div>
 
 <!-- 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
 
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
+--- 
+layout: cover
+class: text-left
 ---
+# Who Am I?
 
-# About Me
+## Gift Egwuenu 
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Frontend Developer Consultant at [Passionate People](https://passionatepeople.io) <br> and Content Creator based in the Netherlands.
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
 
-<br>
-<br>
+[@lauragift_](https://twitter.com/lauragift_)
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+[giftegwuenu.com](https://giftegwuenu.com)
+
+<div class="flex">
+<img class="rounded-1/2 h-60 abs-tr mt-36 mr-16" src="https://res.cloudinary.com/lauragift/image/upload/v1624353138/4EFA5623-1143-4480-A319-F5389240D87A_hgsluf.jpg" alt="Gift Egwuenu">
+</div>
+
+
+<div class="abs-br m-6 flex gap-2 pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    <carbon:arrow-right class="inline text-4xl"/>
+  </span>
+</div>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -83,57 +78,44 @@ h1 {
 
 ---
 
-# Navigation
+# What We'll Cover?
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+In this talk, I will cover the different eras in CSS History.
 
-### Keyboard Shortcuts
+- ### The Past: CSS History
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+- ### The Present and
+- ### The Future of CSS
 
 <!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
+<!-- <img
   v-click
   class="absolute -bottom-9 -left-7 w-80 opacity-50"
   src="https://sli.dev/assets/arrow-bottom-left.svg"
 />
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p> -->
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://res.cloudinary.com/lauragift/image/upload/v1630866765/Grid_cam1d9.png
 ---
 
-# Code
+# The Past: CSS History
 
-Use code snippets and get the highlighting directly![^1]
+> Since 1996, We've seen CSS evolve into what we have today, from CSS 1, CSS 2, and CSS 3.
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+Remember when websites were styled like this? 
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
-```
+Well, a lot has changed over the years.
+
+We've even gone from styling layouts with Floats for positioning, IE Support for Styles and Tableessss to more modern layout and styles like we have to today.
 
 <arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
 
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+[^1]: [Image Credits](https://css-tricks.com/look-back-history-css/)
 
 <style>
-.footnotes-sep {å
+.footnotes-sep {
   @apply mt-20 opacity-10;
 }
 .footnotes {
@@ -146,203 +128,45 @@ function updateUser(id: number, update: User) {
 
 ---
 
-# Components
+# The Present: CSS Today
 
-<div grid="~ cols-2 gap-4">
-<div>
+Modern CSS is 
 
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
+We're in a time where it's possible to style layouts with Flexbox and Grid. 
 
 
+<!-- Now we're in time where it possible to style your layout with Flexbox and Grid whivh saves us all the headache of styling multi-demensional layout. what else can we do with Modern CSS. I'm pretty sure most of us keep up with the latest in CSS world so some of these might already be familair to you. -->
 ---
+layout: center
 class: px-20
 ---
 
-# Themes
+# What does the Future look like?
 
 Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
 
 Read more about [How to use a theme](https://sli.dev/themes/use.html) and
 check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
-preload: false
----
 
-# Animations
+# Resources
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div 
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-2 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.9}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
-
+- [A Look Back at the History of CSS](https://css-tricks.com/look-back-history-css/)
+- 
+- 
+- 
+<!-- I've only scratched the surface in this talk, if you'll love to get into more depth some of the things I shared here today I will recommend you check out the following resources: -->
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Thank You!
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+[Slides](https://sli.dev) · [Demos](https://github.com/slidevjs/slidev)
+
+<p class="text-xs">
+  Slides made with 
+  <a href="https://sli.dev/" target="_blank">Slidev</a>
+</p>
