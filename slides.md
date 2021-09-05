@@ -33,10 +33,11 @@ Infobip Shift Dev 2021
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
---- 
+---
 layout: cover
 class: text-left
 ---
+
 # Who Am I?
 
 ## Gift Egwuenu 
@@ -60,32 +61,18 @@ Frontend Developer Consultant at [Passionate People](https://passionatepeople.io
 </div>
 
 <!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
+Hi everyone!
+
+I'm very excited to be giving this talk at Infobip. So glad to be back to In-person activities.
 -->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-</style>
-
 ---
-
+layout: cover
+---
 # What We'll Cover?
-
-In this talk, I will cover the different eras in CSS History.
-
-- ### The Past: CSS History
-
-- ### The Present and
-- ### The Future of CSS
+- #### The Past: CSS History
+- #### The Present: Modern CSS
+- #### The Future of CSS
 
 <!-- https://sli.dev/guide/animations.html#click-animations -->
 <!-- <img
@@ -102,29 +89,14 @@ image: https://res.cloudinary.com/lauragift/image/upload/v1630866765/Grid_cam1d9
 
 # The Past: CSS History
 
-> Since 1996, We've seen CSS evolve into what we have today, from CSS 1, CSS 2, and CSS 3.
+> Since 1996, We've seen CSS evolve into what we love today, from CSS 1, CSS 2, all the way to CSS 3.
 
 Remember when websites were styled like this? 
 
-Well, a lot has changed over the years.
+Well, a lot has changed over the years. 
 
-We've even gone from styling layouts with Floats for positioning, IE Support for Styles and Tableessss to more modern layout and styles like we have to today.
+We've even gone from styling layouts with floats and clear, tables for layouts, IE support for styles to more modern layouts like we have today.
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Image Credits](https://css-tricks.com/look-back-history-css/)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
 
 ---
 
@@ -136,6 +108,232 @@ We're in a time where it's possible to style layouts with Flexbox and Grid.
 
 
 <!-- Now we're in time where it possible to style your layout with Flexbox and Grid whivh saves us all the headache of styling multi-demensional layout. what else can we do with Modern CSS. I'm pretty sure most of us keep up with the latest in CSS world so some of these might already be familair to you. -->
+---
+layout: cover
+---
+
+# Modern CSS Features
+
+- Content Visibility
+- Scroll Snap
+- Aspect Ratio
+- Pseudo Class Selectors `:is()`, `:where()`, and `:not()`
+- Logical CSS Functions
+- Container Queries
+
+
+---
+
+# Content Visibility
+
+Content-visibility enables the user agent to skip an element's rendering work, including layout and painting, until it is needed.
+
+```css
+section {
+  content-visibility: auto;
+}
+```
+
+---
+layout: center
+---
+
+<h1 class="text-center">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/RwgGpjZ?default-tab=css%2Cresult&editable=true" />
+
+---
+
+<h1 class="text-center"> Scroll Snap </h1>
+
+Scroll Snap Feature in CSS allows you lock the viewport of certain elements or locations after a user has finished scrolling.
+
+This feature allows you to control panning and scrolling behavior with `snap positions`.
+
+---
+layout: center
+---
+
+<h1 class="text-center underline">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/PojGYVo?default-tab=css%2Cresult&editable=true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# Aspect Ratio
+
+Aspect ratio is most commonly expressed as two integers and a colon in the dimensions of `width:height`, or `x:y`. 
+
+Maintaining a consistent width-to-height ratio, called an aspect ratio, is critical in responsive web design and helps prevent cumulative layout shift on first load.
+
+<div class="flex justify-center">
+  <Codepen width="800" height="300" link="https://codepen.io/lauragift21/embed/jOwMpqB?default-tab=css%2Cresult&editable=true" />
+</div>
+
+<!-- Before this feature came to the browser, One way of solving this using the Padding Top Hack.
+ This means you need to Calculate the aspect ratio as a percentagee and set it as the padding top property. width:height = height/width * 100 %
+
+Now with the aspect ration property you can directly apply the property to set a defined spect ration for the -->
+
+---
+layout: center
+---
+
+<h1 class="text-center">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/YzQGKmb?default-tab=css%2Cresult&editable=true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+layout: center
+class: text-center
+---
+
+# Pseudo Class Selectors `:is`, `:where` and `:not()`
+
+---
+
+# `:is()` Selector
+
+The `:is()` pseudo-class function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
+
+```css
+  section > :is(h1, h2, h3, p) {
+    font-size: 20px;
+  }
+```
+Translates to the following:
+
+```css
+section > h1, section > h2, section > h3, section > p {
+  font-size: 20px;
+}
+```
+---
+---
+
+# `:where()` Selector
+
+The `:where()` selector functions the exact way as the `:is()` pseudo-class functions with the exception of a specificity rule applied to it - it's specificity is always zero.
+
+```css
+  section > :where(h1, h2, h3, p) {
+    font-size: 20px;
+  }
+```
+Translates to the following:
+
+```css
+section > h1, section > h2, section > h3, section > p {
+  font-size: 20px;
+}
+```
+---
+
+# `:not()` Selector
+
+The `:not()` pseudo-class represents elements that do not match a list of selectors.
+ 
+Since it prevents specific items from being selected, it is known as the negation pseudo-class.
+```css
+  :not(h1, h2, h3, p) {
+    font-size: 20px;
+  }
+```
+---
+layout: center
+---
+
+<h1 class="text-center">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/gORwYZY?default-tab=css%2Cresult&editable=true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+layout: center
+---
+
+# Logical CSS Functions - `min()`, `max()`, `clamp()`
+
+---
+layout: center
+---
+
+<h1 class="text-center">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/abwmboj?default-tab=css%2Cresult&editable=true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# Container Queries
+
+Container Queries is one of the newest CSS feature that would allow web developers to style DOM elements based on the size of a containing element rather than the size of the browser viewport.
+
+---
+layout: center
+---
+
+<h1 class="text-center">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/yLXJWGb?default-tab=css%2Cresult&editable=true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
 ---
 layout: center
 class: px-20
@@ -153,8 +351,7 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 # Resources
 
 - [A Look Back at the History of CSS](https://css-tricks.com/look-back-history-css/)
-- 
-- 
+- [Selectors Level 4 Draft Spec](https://drafts.csswg.org/selectors-4/)
 - 
 <!-- I've only scratched the surface in this talk, if you'll love to get into more depth some of the things I shared here today I will recommend you check out the following resources: -->
 ---
