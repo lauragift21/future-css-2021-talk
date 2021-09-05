@@ -84,7 +84,7 @@ layout: cover
 
 ---
 layout: image-right
-image: https://res.cloudinary.com/lauragift/image/upload/v1630866765/Grid_cam1d9.png
+image: ./static/images/grid.png
 ---
 
 # The Past: CSS History
@@ -256,7 +256,7 @@ section > h1, section > h2, section > h3, section > p {
 # `:not()` Selector
 
 The `:not()` pseudo-class represents elements that do not match a list of selectors.
- 
+
 Since it prevents specific items from being selected, it is known as the negation pseudo-class.
 ```css
   :not(h1, h2, h3, p) {
@@ -361,7 +361,7 @@ class: text-center
 
 # Thank You!
 
-[Slides](https://sli.dev) · [Demos](https://github.com/slidevjs/slidev)
+[Slides](https://whatsnewincss.netlify.app/) · [Demos](https://codepen.io/collection/QWjdEv)
 
 <p class="text-xs">
   Slides made with 
