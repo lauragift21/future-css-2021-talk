@@ -6,7 +6,8 @@ title: What's New in the World of CSS
 class: 'text-center'
 highlighter: shiki
 # show line numbers in code blocks
-lineNumbers: false
+lineNumbers: true
+download: true
 # some information about the slides, markdown enabled
 info: |
   ## What's New in the World of CSS & The Future of CSS
@@ -373,7 +374,7 @@ Expect more improvements coming in and new CSS features. This is based off the s
 These are some of the features you can expect to see coming to CSS in the future:
 
  - Container Queries - Browser Support.
- - CSS Nesting Module
+ - [CSS Nesting Module](https://www.w3.org/TR/css-nesting-1/)
  - 3
  - 4
 
