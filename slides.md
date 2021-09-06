@@ -1,14 +1,10 @@
 ---
 theme: default
 title: What's New in the World of CSS
-# like them? see https://unsplash.com/collections/94734566/slidev
-# background: https://source.unsplash.com/collection/94734566/1920x1080
 class: 'text-center'
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: true
 download: true
-# some information about the slides, markdown enabled
 info: |
   ## What's New in the World of CSS & The Future of CSS
   Presentation by Gift Egwuenu.
@@ -28,11 +24,6 @@ Infobip Shift Dev 2021
     <carbon:arrow-right class="inline text-4xl"/>
   </span>
 </div>
-
-<!-- 
-
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 layout: cover
@@ -54,34 +45,21 @@ Frontend Developer Consultant at [Passionate People](https://passionatepeople.io
 <img class="rounded-1/2 h-60 abs-tr mt-36 mr-16" src="https://res.cloudinary.com/lauragift/image/upload/v1624353138/4EFA5623-1143-4480-A319-F5389240D87A_hgsluf.jpg" alt="Gift Egwuenu">
 </div>
 
-
 <div class="abs-br m-6 flex gap-2 pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
     <carbon:arrow-right class="inline text-4xl"/>
   </span>
 </div>
 
-<!--
-Hi everyone!
-
-I'm very excited to be giving this talk at Infobip. So glad to be back to In-person activities.
--->
-
 ---
 layout: cover
 ---
+
 # What We'll Cover?
+
 - #### The Past: CSS History
 - #### The Present: Modern CSS
 - #### The Future of CSS
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<!-- <img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p> -->
 
 ---
 layout: image-right
@@ -114,6 +92,12 @@ Modern CSS has improved greatly over the years.
 
 We're in a time when it's possible to style layouts with **Flexbox** and **CSS Grid**, and many other possibilites for styling the web.
 
+<figure>
+<img src="/word-cloud.png" class="mx-auto" width="600" alt="Word Cloud for CSS Properties">
+<figcaption class="text-center text-sm pt-2 text-white underline">
+Word Cloud of Some Modern CSS Properties
+</figcaption>
+</figure>
 <!--
 Now we're in time where it possible to style your layout with Flexbox and Grid whivh saves us all the headache of styling multi-demensional layout. what else can we do with Modern CSS. I'm pretty sure most of us keep up with the latest in CSS world so some of these might already be familair to you.
 -->
@@ -128,22 +112,25 @@ layout: cover
 - Scroll Snap
 - Aspect Ratio
 - Pseudo Class Selectors `:is()`, `:where()`, and `:not()`
-- Logical CSS Functions
+- Logical CSS Functions `min()`, `max()`, and `clamp()`
 - Container Queries
 
 ---
 
 # Content Visibility
 
-Content-visibility enables the user agent to skip an element's rendering work, including layout and painting, until it is needed.
+Content-visibility enables a user agent to skip an element's rendering work, including layout and painting, until it is needed.
 
 ```css
 section {
   content-visibility: auto;
 }
 ```
+---
 
+## You Should Consider 
 
+- Accessibility Impact
 ---
 layout: center
 ---
@@ -342,6 +329,15 @@ h1 {
 Container Queries is one of the newest CSS feature that will allow developers to style `DOM elements` based on the size of a containing element rather than the size of the browser viewport.
 
 
+<!-- CanIuse Embed -->
+<!-- <p class="ciu_embed" data-feature="css-container-queries" data-periods="future_3,future_2,future_1,current,past_1,past_2" data-accessible-colours="false">
+<picture class="flex justify-center">
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-container-queries.webp">
+<source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-container-queries.png">
+<img class="w-3/4" src="https://caniuse.bitsofco.de/image/css-container-queries.jpg" alt="Data on support for the css-container-queries feature across the major browsers from caniuse.com">
+</picture>
+</p> -->
+
 ---
 layout: center
 ---
@@ -369,14 +365,16 @@ image: /future.png
 ## What does the future look like?
 
 
-Expect more improvements coming in and new CSS features. This is based off the snapshot from the CSS Working Group(CSS WG)[^1] Current Work.
+Expect more improvements and features coming into CSS. This information is based off the snapshot from the CSS Working Group(CSS WG) Current Work.[^1]
 
 These are some of the features you can expect to see coming to CSS in the future:
 
  - Container Queries - Browser Support.
  - [CSS Nesting Module](https://www.w3.org/TR/css-nesting-1/)
- - 3
- - 4
+ - CSS Houdini
+ - 
+
+ [^1]: [CSS Working Group](https://www.w3.org/Style/CSS/current-work)
 
 
 ---
@@ -403,7 +401,7 @@ class: text-center
 
 # Thank You!
 
-[Slides](https://whatsnewincss.netlify.app/) · [Demos](https://codepen.io/collection/QWjdEv)
+[Slides](https://whatsnewincss.netlify.app/) · [Demos](https://codepen.io/collection/QWjdEv) · [Links](https://linktr.ee/lauragift_)
 
 <p class="text-xs">
   Slides made with 
