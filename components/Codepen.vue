@@ -23,6 +23,7 @@ defineProps<{
   loading="lazy"
   allowtransparency="true"
   allowfullscreen="true"
+  class="resize"
  >
   See the Pen
   <a :href="src">

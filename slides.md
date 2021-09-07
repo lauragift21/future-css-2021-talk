@@ -1,9 +1,10 @@
 ---
 theme: default
 title: What's New in the World of CSS
+# background: https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3589&q=80
 class: 'text-center'
 highlighter: shiki
-lineNumbers: true
+lineNumbers: false
 download: true
 info: |
   ## What's New in the World of CSS & The Future of CSS
@@ -72,13 +73,15 @@ image: /grid.png
 
 Remember when websites were styled like this? 
 
-Well, a lot has changed over the years. 
 
 ### Does the following ring a bell?
 
-- Float and clearfix hack
+- Float and Clearfix Hack
 - Tables
 - Support for IE Browsers
+- Image Fallbacks
+
+Well, a lot has changed over the years...
 
 <!--
 We've even gone from styling layouts with floats and clear, tables for layouts, IE support for styles to more modern layouts like we have today.
@@ -95,9 +98,10 @@ We're in a time when it's possible to style layouts with **Flexbox** and **CSS G
 <figure>
 <img src="/word-cloud.png" class="mx-auto" width="600" alt="Word Cloud for CSS Properties">
 <figcaption class="text-center text-sm pt-2 text-white underline">
-Word Cloud of Some Modern CSS Properties
+Word cloud of some modern CSS properties
 </figcaption>
 </figure>
+
 <!--
 Now we're in time where it possible to style your layout with Flexbox and Grid whivh saves us all the headache of styling multi-demensional layout. what else can we do with Modern CSS. I'm pretty sure most of us keep up with the latest in CSS world so some of these might already be familair to you.
 -->
@@ -108,56 +112,25 @@ layout: cover
 
 # Modern CSS Features
 
-- Content Visibility
 - Scroll Snap
 - Aspect Ratio
 - Pseudo Class Selectors `:is()`, `:where()`, and `:not()`
-- Logical CSS Functions `min()`, `max()`, and `clamp()`
+- CSS Math Functions `min()`, `max()`, and `clamp()`
+- Content Visibility
 - Container Queries
-
----
-
-# Content Visibility
-
-Content-visibility enables a user agent to skip an element's rendering work, including layout and painting, until it is needed.
-
-```css
-section {
-  content-visibility: auto;
-}
-```
----
-
-## You Should Consider 
-
-- Accessibility Impact
----
-layout: center
----
-
-<h1 class="text-center">Demo</h1>
-
-<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/RwgGpjZ?default-tab=css%2Cresult&editable=true" />
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-</style>
 
 ---
 
 <h1 class="text-center"> Scroll Snap </h1>
 
-Scroll Snap Feature in CSS allows you lock the viewport of certain elements or locations after a user has finished scrolling.
+The Scroll Snap feature in CSS introduces scroll `snap positions`, which enforce the scroll positions that a scroll container’s scrollport may end at after a scrolling operation has completed.
 
-This feature allows you to control panning and scrolling behavior with `snap positions`.
+<figure class="mx-auto text-center">
+<img class="mx-auto w-3/4" src="https://caniuse.bitsofco.de/static/v1/css-snappoints-1630926323687.png" alt="Data on support for the css-snappoints feature across the major browsers from caniuse.com">
+<figcaption class="pt-4 underline">
+  Browsers Support - Data from caniuse.com
+</figcaption>
+</figure>
 
 ---
 layout: center
@@ -179,22 +152,52 @@ h1 {
 }
 </style>
 
+<!-- Here's how it works. You need to set the scroll-type property to a parent container with values being either x mandatory or y mandatory. and the child container will also need to set a scroll-align-type property of which the values here can be `start`, `center`, `end`. -->
 ---
 
 # Aspect Ratio
 
-Aspect ratio is most commonly expressed as two integers and a colon in the dimensions of `width:height`, or `x:y`. 
+Aspect Ratio is most commonly expressed as two integers and a colon in the dimensions of `width:height` or `x:y`. This can be applied to images or video elements. i.e 16:9, 4:3 aspect ratio.
 
-Maintaining a consistent width-to-height ratio, called an aspect ratio, is critical in responsive web design and helps prevent cumulative layout shift on first load.
+### Solutions for Aspect Ratio
 
-<div class="flex justify-center">
-  <Codepen width="800" height="300" link="https://codepen.io/lauragift21/embed/jOwMpqB?default-tab=css%2Cresult&editable=true" />
-</div>
+<br>
+
+Padding-Top Hack
+
+```css
+img {
+  width: 100%;
+  padding-top: 56.6%; /* 16:9 Aspect Ratio Calculated as 9 / 16 * 100 */
+}
+```
+<br>
+
+Native support for Aspect Ratio
+
+```css
+img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+```
 
 <!-- Before this feature came to the browser, One way of solving this using the Padding Top Hack.
  This means you need to Calculate the aspect ratio as a percentagee and set it as the padding top property. width:height = height/width * 100 %
 
 Now with the aspect ration property you can directly apply the property to set a defined spect ration for the -->
+
+---
+layout: center
+---
+
+<figure class="mx-auto text-center">
+<img class="mx-auto w-4/4" src="https://caniuse.bitsofco.de/static/v1/mdn-css__properties__aspect-ratio-1630926408118.png" alt="Data on support for the css-snappoints feature across the major browsers from caniuse.com">
+<figcaption class="pt-4 underline">
+  Browsers Support - Data from caniuse.com
+</figcaption>
+</figure>
 
 ---
 layout: center
@@ -224,25 +227,29 @@ class: text-center
 # Pseudo Class Selectors `:is`, `:where` and `:not()`
 
 ---
-
+layout: center
+---
 # `:is()` Selector
 
 The `:is()` pseudo-class function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
-```css
+```css{1}
   section > :is(h1, h2, h3, p) {
     font-size: 20px;
   }
 ```
-Translates to the following:
 
-```css
+Translates to:
+
+
+```css{1}
 section > h1, section > h2, section > h3, section > p {
   font-size: 20px;
 }
 ```
 
-
+---
+layout: center
 ---
 
 # `:where()` Selector
@@ -263,19 +270,24 @@ section > h1, section > h2, section > h3, section > p {
 }
 ```
 
-
+---
+layout: center
 ---
 
 # `:not()` Selector
 
-The `:not()` pseudo-class represents elements that do not match a list of selectors.
+The `:not()` pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class.
 
-Since it prevents specific items from being selected, it is known as the negation pseudo-class.
 ```css
   :not(h1, h2, h3, p) {
     font-size: 20px;
   }
+
+  section > :not(p) {
+    color: #fff;
+  }
 ```
+
 ---
 layout: center
 ---
@@ -300,7 +312,61 @@ h1 {
 layout: center
 ---
 
-# Logical CSS Functions - `min()`, `max()`, `clamp()`
+# CSS Math Functions - `min()`, `max()`, `clamp()`
+
+<!-- <picture>
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/static/v1/css-math-functions-1630926262603.webp">
+<source type="image/png" srcset="https://caniuse.bitsofco.de/static/v1/css-math-functions-1630926262603.png">
+<img src="https://caniuse.bitsofco.de/static/v1/css-math-functions-1630926262603.jpg" alt="Data on support for the css-math-functions feature across the major browsers from caniuse.com">
+</picture> -->
+---
+layout: center
+---
+# `min()` Function
+
+The `min()` function contains one or more comma-separated calculations and represents the smallest value of them. We use the `min()` to set a maximum value.
+
+```css
+section {
+  width: min(50%, 700px);
+}
+```
+---
+layout: center
+---
+
+# `max()` Function
+
+The `max()` function contains one or more comma-separated calculations and represents the largest value of them. We use the `max()` to set a minimum value. 
+
+```css
+section {
+  width: max(50%, 700px);
+}
+```
+
+---
+layout: center
+---
+
+# `clamp()` Function
+
+The `clamp()` CSS function clamps a value between an upper and lower bound. `clamp()` enables selecting a middle value within a range of values between a defined minimum and maximum. 
+
+It takes three parameters: _a minimum value_, _a preferred value_, and _a maximum allowed value_.
+
+```css
+clamp(minimum, value, maximum)
+```
+
+Example:
+
+```css
+p {
+  font-size: clamp(50%, 2em, 100%);
+}
+
+```
 
 ---
 layout: center
@@ -323,20 +389,90 @@ h1 {
 </style>
 
 ---
+layout: center
+---
 
+<figure class="mx-auto text-center">
+<img class="mx-auto w-3/4" src="https://caniuse.bitsofco.de/static/v1/css-math-functions-1631016030324.png" alt="Data on support for the css-snappoints feature across the major browsers from caniuse.com">
+<figcaption class="pt-4 underline">
+  Browsers Support - Data from caniuse.com
+</figcaption>
+</figure>
+
+---
+
+# Content Visibility
+
+Content-visibility enables a user agent to skip an element's rendering work, including layout and painting, until it is needed.
+
+
+```css
+section {
+  content-visibility: auto;
+}
+```
+<figure class="mx-auto mt-2 text-center">
+<img class="mx-auto w-100" src="/demo.jpeg" alt="Demo of Content Visibility">
+<figcaption class="pt-4 text-sm underline">
+  Web.dev - Content Visibility Perfomance Results
+</figcaption>
+</figure>
+
+---
+layout: center
+class: text-center
+---
+# Gotchas 
+
+- Accessibility Impact
+- 
+---
+layout: center
+---
+
+<h1 class="text-center">Demo</h1>
+
+<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/RwgGpjZ?default-tab=css%2Cresult&editable=true" />
+
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+layout: center
+---
 # Container Queries
 
 Container Queries is one of the newest CSS feature that will allow developers to style `DOM elements` based on the size of a containing element rather than the size of the browser viewport.
 
+```css
 
-<!-- CanIuse Embed -->
-<!-- <p class="ciu_embed" data-feature="css-container-queries" data-periods="future_3,future_2,future_1,current,past_1,past_2" data-accessible-colours="false">
-<picture class="flex justify-center">
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-container-queries.webp">
-<source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-container-queries.png">
-<img class="w-3/4" src="https://caniuse.bitsofco.de/image/css-container-queries.jpg" alt="Data on support for the css-container-queries feature across the major browsers from caniuse.com">
-</picture>
-</p> -->
+@container (min-width: 600px) {
+  .card {
+   font-size: 3em;
+ }
+}
+ 
+```
+---
+layout: center
+---
+
+<figure class="mx-auto text-center">
+<img class="mx-auto w-3/4" src="https://caniuse.bitsofco.de/static/v1/css-container-queries-1630926134618.jpg" alt="Data on support for the css-container-queries feature across the major browsers from caniuse.com">
+<figcaption class="pt-4 underline">
+  Browsers Support - Data from caniuse.com
+</figcaption>
+</figure>
 
 ---
 layout: center
@@ -362,17 +498,20 @@ layout: image-right
 image: /future.png
 ---
 
-## What does the future look like?
+# What does the future look like?
 
 
-Expect more improvements and features coming into CSS. This information is based off the snapshot from the CSS Working Group(CSS WG) Current Work.[^1]
+Expect to see more improvement and features arrive in CSS Land. 
 
-These are some of the features you can expect to see coming to CSS in the future:
+This information is based off the snapshot from the CSS Working Group(CSS WG) Current Work.[^1]
 
- - Container Queries - Browser Support.
+These are features you can expect to see fully supported in the future:
+
+ - Container Queries - browsers support
  - [CSS Nesting Module](https://www.w3.org/TR/css-nesting-1/)
- - CSS Houdini
- - 
+ - [CSS Writing Modes](https://www.w3.org/TR/css-writing-modes-4/)
+
+<br>
 
  [^1]: [CSS Working Group](https://www.w3.org/Style/CSS/current-work)
 
@@ -385,17 +524,18 @@ These are some of the features you can expect to see coming to CSS in the future
 - [Selectors Level 4 Draft Spec](https://drafts.csswg.org/selectors-4/)
 - [Container Queries](https://css.oddbird.net/rwd/query/)
 - [CSS Contain Spec](https://drafts.csswg.org/css-contain/)
-- [MDN :is() Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:is)
+- [MDN CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [CSS WG Current Work](https://www.w3.org/Style/CSS/current-work)
-- []()
-- []()
+- [Web.dev Blog](https://web.dev/blog/)
+- [CSS Tricks](https://css-tricks.com/)
+- [Smashing Magazine](https://www.smashingmagazine.com/)
 
 <!--
-I've only scratched the surface in this talk, if you'll love to get into more depth some of the things I shared here today I will recommend you check out the following resources:
+I've only scratched the surface of Modern CSS in this talk, if you'll love to get into more depth some of the things I shared here today I will recommend you check out the following resources:
 -->
 
 ---
-layout: center
+layout: cover
 class: text-center
 ---
 
