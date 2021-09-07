@@ -116,7 +116,6 @@ layout: cover
 - Aspect Ratio
 - Pseudo Class Selectors `:is()`, `:where()`, and `:not()`
 - CSS Math Functions `min()`, `max()`, and `clamp()`
-- Content Visibility
 - Container Queries
 
 ---
@@ -171,7 +170,6 @@ img {
   padding-top: 56.6%; /* 16:9 Aspect Ratio Calculated as 9 / 16 * 100 */
 }
 ```
-<br>
 
 Native support for Aspect Ratio
 
@@ -180,7 +178,6 @@ img {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
-
 ```
 
 <!-- Before this feature came to the browser, One way of solving this using the Padding Top Hack.
@@ -233,7 +230,7 @@ layout: center
 
 The `:is()` pseudo-class function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
-```css{1}
+```css
   section > :is(h1, h2, h3, p) {
     font-size: 20px;
   }
@@ -242,7 +239,7 @@ The `:is()` pseudo-class function takes a selector list as its argument, and sel
 Translates to:
 
 
-```css{1}
+```css
 section > h1, section > h2, section > h3, section > p {
   font-size: 20px;
 }
@@ -256,7 +253,7 @@ layout: center
 
 The `:where()` selector functions the exact way as the `:is()` pseudo-class functions with the exception of a specificity rule applied to it - it's specificity is always zero.
 
-```css{1}
+```css
   section > :where(h1, h2, h3, p) {
     font-size: 20px;
   }
@@ -264,7 +261,7 @@ The `:where()` selector functions the exact way as the `:is()` pseudo-class func
 
 Translates to:
 
-```css{1}
+```css
 section > h1, section > h2, section > h3, section > p {
   font-size: 20px;
 }
@@ -400,56 +397,9 @@ layout: center
 </figure>
 
 ---
-
-# Content Visibility
-
-Content-visibility enables a user agent to skip an element's rendering work, including layout and painting, until it is needed.
-
-
-```css
-section {
-  content-visibility: auto;
-}
-```
-<figure class="mx-auto mt-2 text-center">
-<img class="mx-auto w-100" src="/demo.jpeg" alt="Demo of Content Visibility">
-<figcaption class="pt-4 text-sm underline">
-  Web.dev - Content Visibility Perfomance Results
-</figcaption>
-</figure>
-
----
-layout: center
-class: text-center
----
-# Gotchas 
-
-- Accessibility Impact
-- 
----
 layout: center
 ---
 
-<h1 class="text-center">Demo</h1>
-
-<Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/RwgGpjZ?default-tab=css%2Cresult&editable=true" />
-
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-</style>
-
----
-layout: center
----
 # Container Queries
 
 Container Queries is one of the newest CSS feature that will allow developers to style `DOM elements` based on the size of a containing element rather than the size of the browser viewport.
