@@ -204,11 +204,12 @@ layout: center
 ---
 
 <figure class="mx-auto text-center">
-<img class="mx-auto w-4/4" src="https://caniuse.bitsofco.de/static/v1/mdn-css__properties__aspect-ratio-1630926408118.png" alt="Data on support for the css-snappoints feature across the major browsers from caniuse.com">
+<img class="mx-auto w-3/4" src="https://caniuse.bitsofco.de/static/v1/mdn-css__properties__aspect-ratio-1630926408118.png" alt="Data on support for the css-snappoints feature across the major browsers from caniuse.com">
 <figcaption class="pt-4 underline">
   Browsers Support - Data from caniuse.com
 </figcaption>
 </figure>
+
 
 ---
 layout: center
