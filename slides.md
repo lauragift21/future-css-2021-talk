@@ -5,7 +5,6 @@ title: What's New in the World of CSS
 class: 'text-center'
 highlighter: shiki
 lineNumbers: false
-download: true
 info: |
   ## What's New in the World of CSS & The Future of CSS
   Presentation by Gift Egwuenu.
