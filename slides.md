@@ -78,7 +78,6 @@ Remember when websites were styled like this?
 - Float and Clearfix Hack
 - Tables
 - Support for IE Browsers
-- Image Fallbacks
 
 Well, a lot has changed over the years...
 
@@ -118,10 +117,26 @@ layout: cover
 - Container Queries
 
 ---
+layout: cover
+---
 
-<h1 class="text-center"> Scroll Snap </h1>
+# Scroll Snap
 
 The Scroll Snap feature in CSS introduces scroll `snap positions`, which enforce the scroll positions that a scroll container’s scrollport may end at after a scrolling operation has completed.
+
+```css
+.parent {
+  scroll-snap-type: both; /* values can change to x, y, block, inline  */
+}
+
+.child {
+  scroll-type-align: start;
+}
+```
+
+---
+layout: center
+---
 
 <figure class="mx-auto text-center">
 <img class="mx-auto w-3/4" src="https://caniuse.bitsofco.de/static/v1/css-snappoints-1630926323687.png" alt="Data on support for the css-snappoints feature across the major browsers from caniuse.com">
@@ -134,7 +149,7 @@ The Scroll Snap feature in CSS introduces scroll `snap positions`, which enforce
 layout: center
 ---
 
-<h1 class="text-center underline">Demo</h1>
+<h1 class="text-center text-4xl">Demo</h1>
 
 <Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/PojGYVo?default-tab=css%2Cresult&editable=true" />
 
@@ -199,7 +214,7 @@ layout: center
 layout: center
 ---
 
-<h1 class="text-center">Demo</h1>
+<h1 class="text-center text-4xl">Demo</h1>
 
 <Codepen width="800" height="400" link="https://codepen.io/lauragift21/embed/YzQGKmb?default-tab=css%2Cresult&editable=true" />
 
