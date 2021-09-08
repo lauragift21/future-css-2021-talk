@@ -126,7 +126,7 @@ The Scroll Snap feature in CSS introduces scroll `snap positions`, which enforce
 
 ```css
 .parent {
-  scroll-snap-type: both; /* values can change to x, y, block, inline  */
+  scroll-snap-type: x mandatory;
 }
 
 .child {
@@ -326,11 +326,6 @@ layout: center
 
 # CSS Math Functions - `min()`, `max()`, `clamp()`
 
-<!-- <picture>
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/static/v1/css-math-functions-1630926262603.webp">
-<source type="image/png" srcset="https://caniuse.bitsofco.de/static/v1/css-math-functions-1630926262603.png">
-<img src="https://caniuse.bitsofco.de/static/v1/css-math-functions-1630926262603.jpg" alt="Data on support for the css-math-functions feature across the major browsers from caniuse.com">
-</picture> -->
 ---
 layout: center
 ---
@@ -375,7 +370,7 @@ Example:
 
 ```css
 p {
-  font-size: clamp(50%, 2em, 100%);
+  font-size: clamp(300px, 50%, 800px);
 }
 
 ```
@@ -472,9 +467,8 @@ This information is based off the snapshot from the CSS Working Group(CSS WG) Cu
 
 These are features you can expect to see fully supported in the future:
 
- - Container Queries - browsers support
+ - [Container Queries](https://drafts.csswg.org/css-contain-3/) - browsers support
  - [CSS Nesting Module](https://www.w3.org/TR/css-nesting-1/)
- - [CSS Writing Modes](https://www.w3.org/TR/css-writing-modes-4/)
 
 <br>
 
