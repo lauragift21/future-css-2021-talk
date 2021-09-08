@@ -502,6 +502,13 @@ class: text-center
 
 [Slides](https://whatsnewincss.netlify.app/) · [Demos](https://codepen.io/collection/QWjdEv) · [Links](https://linktr.ee/lauragift_)
 
+<figure class="mx-auto text-center">
+<img class="mx-auto w-1/4" src="/qr.png" alt="QR Code for Slides">
+<figcaption>
+</figcaption>
+</figure>
+
+
 <p class="text-xs">
   Slides made with 
   <a href="https://sli.dev/" target="_blank">Slidev</a>
